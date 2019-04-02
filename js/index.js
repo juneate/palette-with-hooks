@@ -14,10 +14,10 @@ const Channel = (props) => {
 
   // Render
   return (
-    <div class="channel">
-      <button type="button" class="btn up" onClick={() => updateRgb(rgb + 1)}>+</button>
-      <input type="text" class="txt" value={rgb} onChange={({target}) => updateRgb(Number(target.value))} />
-      <button type="button" class="btn down" onClick={() => updateRgb(rgb - 1)}>-</button>
+    <div className="channel">
+      <button type="button" className="btn up" onClick={() => updateRgb(rgb + 1)}>+</button>
+      <input type="text" className="txt" value={rgb} onChange={({target}) => updateRgb(Number(target.value))} />
+      <button type="button" className="btn down" onClick={() => updateRgb(rgb - 1)}>-</button>
     </div>
   );
 };
@@ -38,7 +38,7 @@ const Swatch = (props) => {
 
   // Render
   return (
-    <li class="colour" style={myStyles}>
+    <li className="swatch" style={myStyles}>
       <div>rgb(</div>
       <Channel rgb={r} handleOnChange={setR}/>
       <Channel rgb={g} handleOnChange={setG} />
@@ -53,7 +53,7 @@ const Swatch = (props) => {
 const Palette = () => {
   // Render
   return (
-    <ul class="palette">
+    <ul className="palette">
       <Swatch red={255} green={0} blue={0} />
       <Swatch red={0} green={255} blue={0} />
       <Swatch red={0} green={0} blue={255} />
